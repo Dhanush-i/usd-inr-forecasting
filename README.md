@@ -1,62 +1,133 @@
-## USD to INR Time Series Analysis and Forecasting
+# USD-INR Exchange Rate Forecasting
 
-### Overview
---------
-This project analyzes daily USD to INR exchange rate data and builds ARIMA-based forecasts through 2026.
-The notebook includes data collection, trend analysis, stationarity testing, forecasting, and model evaluation.
+## 📊 Overview
 
-#### Main Notebook
--------------
-notebooks/USD_to_INR_Analysis.ipynb
+This project focuses on **time series analysis and forecasting** of USD to INR exchange rates using statistical techniques.
 
-### What the Notebook Does
-----------------------
-1. Imports required libraries:
-	yfinance, pandas, numpy, matplotlib, statsmodels, and scikit-learn metrics.
+It covers the complete workflow:
 
-2. Downloads market data:
-	- Ticker: INR=X
-	- Start date: 2020-01-01
-	- Keeps only the Close column and removes missing rows.
+* Data collection
+* Trend analysis
+* Stationarity testing
+* ARIMA modeling
+* Forecasting future values
 
-3. Performs base visualization:
-	- Plots daily USD to INR exchange rate over time.
+The objective is to predict exchange rate trends up to **2026**.
 
-4. Runs moving average analysis:
-	- 90-day Simple Moving Average (SMA_90)
-	- 30-day Exponential Moving Average (EMA_30)
-	- Compares raw series vs smoothed trend lines.
+---
 
-5. Tests stationarity using ADF:
-	- Runs Augmented Dickey-Fuller test on original Close series.
-	- Applies first-order differencing.
-	- Re-runs ADF test on differenced series.
-	- Plots differenced values.
+## 📁 Project Structure
 
-6. Builds ARIMA forecast (baseline):
-	- Train/test split using last 90 days as test.
-	- ARIMA order: (5, 2, 0)
-	- Forecasts roughly 195 business days into late 2026.
+```
+Time-Series-Forecasting-Techniques/
+│
+├── notebooks/
+│   └── USD_to_INR_Analysis.ipynb
+│
+├── requirements.txt
+└── README.md
+```
 
-7. Builds ARIMA forecast (improved):
-	- Train/test split using last 30 days.
-	- Tests candidate ARIMA orders and selects best by train AIC.
-	- Uses walk-forward one-step prediction on test data.
-	- Retrains on full data and forecasts up to 2026-12-31.
-	- Adds 95% confidence interval.
+---
 
-8. Evaluates model:
-	- Mean Squared Error (MSE)
-	- Root Mean Squared Error (RMSE)
-	- R-squared (R2)
+## ⚙️ Technologies Used
 
-### Dependancies
-------------
-Install the Python packages used in the notebook using `pip install -r requirements.txt`
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Statsmodels (ARIMA)
+* Scikit-learn
+* yFinance
 
-### How to Run
-----------
-1. Activate your virtual environment.
-2. Open notebooks/USD_to_INR_Analysis.ipynb.
-3. Run cells from top to bottom.
-4. Review generated plots and printed metrics.
+---
+
+## 📌 Features
+
+### 📥 Data Collection
+
+* Historical USD-INR data fetched using Yahoo Finance
+* Data cleaning and preprocessing
+
+### 📈 Trend Analysis
+
+* Visualization of exchange rate trends
+* Moving averages:
+
+  * 90-day SMA
+  * 30-day EMA
+
+### 🧪 Stationarity Testing
+
+* Augmented Dickey-Fuller (ADF) test
+* Differencing to stabilize data
+
+### 🤖 Forecasting
+
+* ARIMA model implementation
+* Parameter tuning using AIC
+* Walk-forward validation
+* Confidence interval prediction
+
+### 📊 Evaluation Metrics
+
+* Mean Squared Error (MSE)
+* Root Mean Squared Error (RMSE)
+* R² Score
+
+---
+
+## 📉 Results
+
+* Forecasts USD-INR exchange rates up to **December 2026**
+* Visual comparison of actual vs predicted values
+* Confidence intervals for predictions
+
+---
+
+## 🛠️ Installation
+
+```bash
+git clone https://github.com/your-username/usd-inr-time-series-forecasting.git
+cd usd-inr-time-series-forecasting
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Usage
+
+1. Open the notebook:
+
+```bash
+jupyter notebook notebooks/USD_to_INR_Analysis.ipynb
+```
+
+2. Run all cells step by step
+
+3. View:
+
+* Data visualizations
+* Model outputs
+* Forecast graphs
+
+---
+
+## 🎯 Future Improvements
+
+* Implement LSTM / Deep Learning models
+* Automate hyperparameter tuning
+* Deploy as a web application
+* Add real-time forecasting
+
+---
+
+## 👨‍💻 Author
+
+Your Name
+
+---
+
+## ⭐ Acknowledgment
+
+This project demonstrates practical implementation of time series forecasting using real-world financial data.
