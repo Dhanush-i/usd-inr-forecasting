@@ -122,12 +122,6 @@ jupyter notebook notebooks/USD_to_INR_Analysis.ipynb
 
 ---
 
-## 👨‍💻 Author
-
-Your Name
-
----
-
 ## ⭐ Acknowledgment
 
 This project demonstrates practical implementation of time series forecasting using real-world financial data.
