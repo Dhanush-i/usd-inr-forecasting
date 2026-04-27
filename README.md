@@ -1,9 +1,13 @@
 # USD-INR Exchange Rate Forecasting
 
-## 📊 Overview
+A time-series forecasting system that predicts USD-INR exchange rate trends using ARIMA with statistical validation techniques.
 
-This project focuses on **time series analysis and forecasting** of USD to INR exchange rates using statistical techniques.
-
+## Key Features
+- ARIMA-based forecasting with walk-forward validation
+- Stationarity testing (ADF) and AIC-based tuning
+- SMA & EMA trend analysis
+- Automated data pipeline using yFinance
+  
 It covers the complete workflow:
 
 * Data collection
